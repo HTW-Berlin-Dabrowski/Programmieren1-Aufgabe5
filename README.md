@@ -29,7 +29,7 @@ Nun wird die Klasse `MIDITools` nicht mehr benötigt!
 
 Passen Sie den Constructor von `MIDITrack` so an, dass er nur noch ein Argument nimmt: Einen `String`, der den ganzen Track im folgenden Format beschreibt: `<Default velocity>;<Dauer einer ganzen Note>;<Instrument>;<Noten>`, beispielsweise `60;120;Acoustic Grand Piano;C,2 G''#2`. Die einzelnen Noten sind also mit Leerzeichen getrennt, davor stehen drei mit Semikolons abgetrennte Informationen. Die ersten drei Informationen sind die default velocity und die Dauer einer ganzen Note (die Sie beide für den Constructor von `Note` benötigen) sowie der Name des Instruments, danach kommen die Noten im gewohnten Format. Sie können sich das Leben mit der Methode `String.split()` hier sehr einfach machen.
 
-Das Instrument soll der Instrumentenname aus der [MIDI-Spezifikation](http://www.music.mcgill.ca/~ich/classes/mumt306/StandardMIDIfileformat.html#BMA1_), Appendix 1.4, sein. Verwenden Sie hierfür nicht 128 if-else! Sie können das einfach mit einer `HashMap` lösen, die Sie im Constructor aus einem String initialisieren, den Sie sich wiederum aus der Tabelle zusammenkopieren. Hier ein Beispiel für die Verwendung einer HashMap in einem ähnlichen Kontext:
+Das Instrument soll der Instrumentenname aus der [MIDI-Spezifikation](https://midimusic.github.io/tech/midispec.html#BMA1_4), Appendix 1.4, sein. Verwenden Sie hierfür nicht 128 if-else! Sie können das einfach mit einer `HashMap` lösen, die Sie im Constructor aus einem String initialisieren, den Sie sich wiederum aus der Tabelle zusammenkopieren. Hier ein Beispiel für die Verwendung einer HashMap in einem ähnlichen Kontext:
 
 ```java
 public class HashMapExample {
@@ -42,7 +42,7 @@ public class HashMapExample {
             ageData = item.split(", " );
             String name = ageData[0];
             Integer age = Integer.parseInt(ageData[1]);
-            ages.add(name, age);
+            ages.put(name, age);
         }
     }
         
