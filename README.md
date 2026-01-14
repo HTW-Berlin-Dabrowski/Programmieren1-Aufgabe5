@@ -17,11 +17,11 @@ Beachten Sie in diesem Fall, dass das Array kein `byte[]` mehr ist, sondern ein 
 
 # Aufgabe 2
 
-Passen Sie die Methode `MIDITrack.Track()` so an, dass sie anstatt eines `byte[]` eine `ArrayList<Byte>` zurückgibt. An dieser Stelle müssten Sie den Vorteil der `ArrayList` - insbesondere der Methode `addAll(ArrayList other)` - sehen.
+Passen Sie die Methode `MIDITrack.getTrack()` so an, dass sie anstatt eines `byte[]` eine `ArrayList<Byte>` zurückgibt. An dieser Stelle müssten Sie den Vorteil der `ArrayList` - insbesondere der Methode `addAll(ArrayList other)` - sehen.
 
 # Aufgabe 3
 
-Passen Sie die Methode `MIDITrack.getBytes()` so an, dass sie anstatt eines `byte[]` eine `ArrayList<Byte>` zurückgibt.
+Passen Sie die Methode `MIDIFile.getBytes()` so an, dass sie anstatt eines `byte[]` eine `ArrayList<Byte>` zurückgibt.
 
 Nun wird die Klasse `MIDITools` nicht mehr benötigt!
 
